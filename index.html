@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="image/cicada.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Self Introduction</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/sky.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h3>自己紹介</h3>
+                <h4>錦織　晃太郎 (Kotaro Nishigori)</h4>
+                <h5 id="date"></h5>
+            </section>
+            <section>
+                <h3>所属</h3>
+                <h5>
+                    総合研究大学院大学 複合科学研究科 情報学専攻 1年
+                </h5>
+                <h5>
+                    ---> 国立情報学研究所
+                </h5>
+                <img src="image/nii.png" alt="NII" width="400">
+            </section>
+            <section>
+                <h3>
+                    研究テーマ 1
+                </h3>
+                <h5>
+                    <b>
+                        クリエイターの権利や利益が損害されない世界を創る
+                    </b>
+                </h5>
+                <h5>
+                    ---> 訴訟や懲罰等の抑止力やコンテンツの権利の作成とかでは根本的に解決しない
+                </h5>
+                <h5>
+                    ---> じゃあどうする？ということを研究している
+                </h5>
+            </section>
+            <section>
+                <h3>研究テーマ 2</h3>
+                <h5>
+                    海賊版(悪)の存在がクリエイター(善)の権利を損害
+                </h5>
+                <h5>
+
+                    --->善が得をして、悪が損をする世界を創ることができれば良い
+                </h5>
+                <h5>
+                    <b>
+                        Blockchainがこの世界を既に創っている
+                    </b>
+                </h5>
+                <h5>
+                    ---> 不正を働く(悪)より真面目に計算したほう(善)が結局利益が高くなる(PoW)
+                </h5>
+                <h5>
+                    ---> Blockchainを参考にコンテンツ産業に取り入れることができないかを研究中
+                </h5>
+            </section>
+            <section>
+                <h3>趣味</h3>
+                <ul>
+                    <li>Otaku/Weebの観察<br>
+                        TwitterやRedditで観察中
+                    </li>
+                    <li>自転車でサイクリング<br>
+                        <h5>
+                            東京スタートで時計回りに自転車で日本を一周した
+                        </h5>
+                    </li>
+                    <li>夜に散歩<br>
+                        <h5>最近は皇居一周を歩いてます</h5>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>
+                    日本一周中に遭遇したイベント 1
+                </h3>
+                <h5>公園で寝てたら元気な人たちに絡まれる</h5>
+                <img src="image/genki.png" alt="genki" width="350">
+            </section>
+            <section>
+                <h3>
+                    日本一周中に遭遇したイベント 2
+                </h3>
+                <h5>避難勧告出る(確か避難命令も出てた)</h5>
+                <img src="image/hinan.png" alt="genki" width="250">
+            </section>
+            <section>
+                <h3>TODO</h3>
+                <h5>世界一周やりたい</h5>
+            </section>
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="node_modules/reveal.js-menu/menu.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMenu],
+        });
+
+        // Today dates
+        n = new Date();
+        y = n.getFullYear();
+        m = n.getMonth() + 1;
+        d = n.getDate();
+        const weekday = new Array(7);
+        weekday[0] = "Sunday";
+        weekday[1] = "Monday";
+        weekday[2] = "Tuesday";
+        weekday[3] = "Wednesday";
+        weekday[4] = "Thursday";
+        weekday[5] = "Friday";
+        weekday[6] = "Saturday";
+        const w = weekday[n.getDay()];
+        document.getElementById("date").innerHTML =
+            y + "/" + m + "/" + d + "/" + w;
+    </script>
+</body>
+
+</html>
